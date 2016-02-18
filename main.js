@@ -39,3 +39,21 @@ console.log('hello world');
 
 
 //3: Show me how find the item with a "GBP" currency code and print its name and price. Please console.log the one you //find.
+//We need to find the GBP with currency_code.
+//I'm thinking to just use the code from question 2.
+//Use that code to pass the argument to not store anything with USD
+(function (){
+
+  function currencyId(value){ //this function is to find what object attribute doesn't equal 'USD'
+    return value.currency_code != 'USD'
+  }
+
+  var currencyType = items.filter(currencyId); //then plug the currencyId function as my callback
+
+console.log(currencyType); //prints the only object with a curency_code of 'GBP'
+
+}());
+
+
+
+//4: Show me how to find which items are made of wood. Please console.log the ones you find.
